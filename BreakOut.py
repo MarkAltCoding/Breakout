@@ -40,7 +40,7 @@ class Ball(pygame.Rect):
         self.bounceCount = 0
 
     def draw(self):
-        pygame.draw.ellipse(screen, 'white', self, 0)
+        pygame.draw.rect(screen, 'white', self, 0)
 
     def update(self):
         self.x += self.vx
@@ -84,9 +84,9 @@ for x in range(4, screen.get_width()-Brick.WIDTH, Brick.WIDTH+4):
 
 while True:
     # Process player inputs.
-    player.x=pygame.mouse.get_pos()[0]-player.width/2
-#    ball.x = pygame.mouse.get_pos()[0] - ball.width / 2
-#    ball.y = pygame.mouse.get_pos()[1] - ball.height/2
+#    player.x=pygame.mouse.get_pos()[0]-player.width/2
+    ball.x = pygame.mouse.get_pos()[0] - ball.width / 2
+    ball.y = pygame.mouse.get_pos()[1] - ball.height/2
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             pygame.quit()
