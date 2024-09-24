@@ -4,7 +4,7 @@ from random import randint as r
 
 from pygame.examples.eventlist import virtual_x
 
-pygame.init()
+pygame.init() # russell test
 
 pygame.font.init()
 
